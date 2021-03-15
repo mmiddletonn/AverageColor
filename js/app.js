@@ -23,7 +23,7 @@
         },
         presence: function(m){
             if(m.occupancy > 1) {
-                presence.textContent = m.occupancy + ' people online';
+                presence.textContent = m.occupancy + ' total people online';
             } else {
                 presence.textContent = 'Nobody else is online';
             }
