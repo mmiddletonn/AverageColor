@@ -12,8 +12,8 @@
     avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
 
     var p = PUBNUB.init({
-        subscribe_key: 'sub-c-f762fb78-2724-11e4-a4df-02ee2ddab7fe',
-        publish_key:   'pub-c-156a6d5f-22bd-4a13-848d-b5b4d4b36695'
+        subscribe_key: 'sub-c-1d799376-85b5-11eb-a47e-8aa5932e3236',
+        publish_key:   'pub-c-c3564aa2-a04d-4ab0-bed3-93a42c77e870'
     });
 
     p.subscribe({
