@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="./css/style.css">
+	<link href="./css/imgur.min.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
@@ -22,6 +23,7 @@
 			<i id="avatar" class="face12"></i><input type="text" id="input" placeholder="Type your message...">
 		</div>
 		<button id="button">Send Message</button>
+		<div class="dropzone"></div>
  		
 		<p id="presence"></p>
 		<div id="output"></div>
@@ -32,6 +34,22 @@
 
 	<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
 	<script src="./js/app.js"></script>
+	<script src="./js/imgur.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+		let textInput = document.getElementById('input');
+		var callback = function (res) {
+        	if (res.success === true) {
+            	textInput.value = res.data.link;
+        	}
+    	};
+
+    	new Imgur({
+        	clientid: '7f0647e1e9365c2',
+        	callback: callback
+		});
+</script>
 	
 </body>
 </html>

@@ -1,10 +1,16 @@
+
+
 (function() {
+
+
+    let textInput = document.getElementById('input');
+
+    
 
     var output = PUBNUB.$('output'), 
         input = PUBNUB.$('input'), 
         button = PUBNUB.$('button'),
-        avatar = PUBNUB.$('avatar'),
-        presence = PUBNUB.$('presence');
+        avatar = PUBNUB.$('avatar')
 
     var channel = 'mchat';
     
@@ -18,15 +24,8 @@
 
     p.subscribe({
         channel  : channel,
-        callback : function(m) { 
+        callback : function(m) {
             output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' +  m.text.replace( /[<>]/ig, '' ) + '</span></p>' + output.innerHTML; 
-        },
-        presence: function(m){
-            if(m.occupancy > 1) {
-//                 presence.textContent = m.occupancy + ' total people online';
-            } else {
-//                 presence.textContent = 'Nobody else is online';
-            }
         }
     });
 
@@ -37,11 +36,13 @@
     p.bind('click', button, publish);
 
     function publish() {
-        p.publish({
-            channel : channel, 
-            message : {avatar: avatar.className, text: input.value}, 
-            x : (input.value='')
-        });
+        if(textInput.value.length > 0){
+            p.publish({
+                channel : channel, 
+                message : {avatar: avatar.className, text: input.value}, 
+                x : (input.value='')
+            });
+        };
     }
 
 
