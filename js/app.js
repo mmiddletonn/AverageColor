@@ -53,9 +53,22 @@
 })();
 
 var linkValue;
+var currentStyleSheet1 = document.getElementById('styleSheet1');
+var currentStyleSheet2 = document.getElementById('styleSheet2');
 
 function imageUpload(){
-
+		
+	if(localStorage.getItem("theme" == "light")){
+		currentStyleSheet1.href = window.location.href + "css/style.css";
+		currentStyleSheet2.href = window.location.href + "css/imgur.min.css";
+		localStorage.setItem("theme", "light");
+	}else if(localStorage.getItem("theme" == "dark")){
+		currentStyleSheet1.href = window.location.href + "css/style.dark.css";
+		currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
+		localStorage.setItem("theme", "dark");		
+    }
+    
+    
     let textInput = document.getElementById('input');
 
     var output = PUBNUB.$('output'), 
