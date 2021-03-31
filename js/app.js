@@ -15,7 +15,16 @@
     var channel = 'mchat';
     
     // Assign a random avatar in random color
-    avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
+    
+
+
+    let trollFaceNum = Math.floor(Math.random() * 100);
+    console.log(trollFaceNum);
+    if(trollFaceNum == 69){
+        avatar.className = "trollFace";
+    }else{
+        avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
+    }
 
     var p = PUBNUB.init({
         subscribe_key: 'sub-c-1d799376-85b5-11eb-a47e-8aa5932e3236',
@@ -57,17 +66,6 @@ var currentStyleSheet1 = document.getElementById('styleSheet1');
 var currentStyleSheet2 = document.getElementById('styleSheet2');
 
 function imageUpload(){
-		
-	if(localStorage.getItem("theme") == "light"){
-		currentStyleSheet1.href = window.location.href + "css/style.css";
-		currentStyleSheet2.href = window.location.href + "css/imgur.min.css";
-		localStorage.setItem("theme", "light");
-	}else if(localStorage.getItem("theme") == "dark"){
-		currentStyleSheet1.href = window.location.href + "css/style.dark.css";
-		currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
-		localStorage.setItem("theme", "dark");		
-    }
-    
     
     let textInput = document.getElementById('input');
 

@@ -162,6 +162,14 @@ a {
     content: "\7a";
 }
 
+.trollFace{
+    background-image: url(../images/trollface.png);
+    height: 50px !important;
+    width: 50px !important;
+    background-attachment: fixed;
+    background-size: 75px 79px;
+}
+
 .color-1 {
     color: #434aff;
 }
