@@ -58,11 +58,11 @@ var currentStyleSheet2 = document.getElementById('styleSheet2');
 
 function imageUpload(){
 		
-	if(localStorage.getItem("theme" == "light")){
+	if(localStorage.getItem("theme") == "light"){
 		currentStyleSheet1.href = window.location.href + "css/style.css";
 		currentStyleSheet2.href = window.location.href + "css/imgur.min.css";
 		localStorage.setItem("theme", "light");
-	}else if(localStorage.getItem("theme" == "dark")){
+	}else if(localStorage.getItem("theme") == "dark"){
 		currentStyleSheet1.href = window.location.href + "css/style.dark.css";
 		currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
 		localStorage.setItem("theme", "dark");		
