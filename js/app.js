@@ -78,6 +78,7 @@ function imageUpload(){
 		currentStyleSheet1.href = window.location.href + "css/style.dark.css";
 		currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
 		localStorage.setItem("theme", "dark");	
+	}
         
         
     var output = PUBNUB.$('output'), 
