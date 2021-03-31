@@ -7,15 +7,15 @@ body {
     padding: 0;
     margin: 0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
-    background: #f9f9f9;
-    color: #333;
+    background: #3f3f3f;
+    color: #dbdbdb;
     transition: background .5s;
 }
 header {
     height: 58px;
-    background: #f9f9f9;
+    background: #3f3f3f;
     border-top: 4px solid #ce1126;
-    border-bottom-color: #eee;
+    border-bottom-color: #3f3f3f;
 }
 h1, h2, h3 {
     margin: 0;
@@ -30,25 +30,30 @@ h1 {
 input[type=text], button {
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    color: #333;
+    border: 3.5px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 1em;
     padding: .7em 1em;
     margin-bottom: 1em;
     display: block;
+    border-radius: 10px;
+    background: #333333;
+}
+::placeholder{
+    color: #dbdbdb;
 }
 button {
-    background: #e6e6e6;
-    text-shadow: 0 1px 0 #f3f3f3;
+    background: #333333;
     margin: .5em 0 2em 0;
     width: 100%;
     transition: background .15s;
-    border-radius: 10px;
+    border: 3.5px solid #000000;
+    border-radius: 5px;
+    color: #dbdbdb;
 }
 button:hover{
     cursor: pointer;
-    background: #d6d6d6;
+    background: #202020;
 }
 #chat {
     height: 75px;
@@ -83,15 +88,16 @@ button:hover{
 }
 #output span {
     position: relative;
-    margin-left: 40px;
-}
-#avatar:hover{
-    cursor: pointer;
+    margin-left: 45px;
 }
 a {
     position: relative;
     margin-left: 45px;
-    color: #333;
+    color: #dbdbdb;
+}
+
+#avatar:hover{
+    cursor: pointer;
 }
 
 /* Font Icons */

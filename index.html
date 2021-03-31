@@ -9,8 +9,8 @@
 	<meta name="author" content="Tomomi Imura  @girlie_mac">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="./css/style.css">
-	<link href="./css/imgur.min.css" rel="stylesheet" media="screen">
+	<link id="styleSheet1" rel="stylesheet" href="./css/style.dark.css">
+	<link id="styleSheet2" rel="stylesheet" href="./css/imgur.min.dark.css"  media="screen">
 </head>
 
 <body onload="imageUpload();">
@@ -20,7 +20,7 @@
 
 	<section id="main" role="main">
 		<div id="chat">
-			<i id="avatar" class="face12"></i><input type="text" id="input" placeholder="Type your message...">
+			<i id="avatar" class="face12" id="avatar" onclick="changeStyleSheet()"></i><input type="text" id="input" placeholder="Type your message...">
 		</div>
 		<button id="button">Send Message</button>
 		<div class="dropzone"></div>
@@ -37,7 +37,20 @@
 	<script src="./js/imgur.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+	<script>
+		var currentStyleSheet1 = document.getElementById('styleSheet1');
+		var currentStyleSheet2 = document.getElementById('styleSheet2');
 
+		function changeStyleSheet(){
+			if(currentStyleSheet1.href == "http://127.0.0.1:5500/css/style.css"){
+				currentStyleSheet1.href = "http://127.0.0.1:5500/css/style.dark.css";
+				currentStyleSheet2.href = "http://127.0.0.1:5500/css/imgur.min.dark.css";
+			}else if(currentStyleSheet1.href == "http://127.0.0.1:5500/css/style.dark.css"){
+				currentStyleSheet1.href = "http://127.0.0.1:5500/css/style.css";
+				currentStyleSheet2.href = "http://127.0.0.1:5500/css/imgur.min.css";
+			}
+		}
+	</script>
 	
 </body>
 </html>
