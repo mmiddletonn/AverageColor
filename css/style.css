@@ -77,6 +77,10 @@ button {
     position: relative;
     margin-left: 40px;
 }
+a {
+    position: relative;
+    margin-left: 45px;
+}
 
 /* Font Icons */
 
@@ -89,7 +93,6 @@ button {
 
 [class^="face"], [class*=" face"] {
     font-family: 'skipop';
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

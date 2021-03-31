@@ -25,7 +25,9 @@
     p.subscribe({
         channel  : channel,
         callback : function(m) {
-            output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' +  m.text.replace( /[<>]/ig, '' ) + '</span></p>' + output.innerHTML; 
+            if(m.href == undefined){
+                output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' +  m.text.replace( /[<>]/ig, '' ) + '</span></p>' + output.innerHTML;
+            }
         }
     });
 
@@ -46,4 +48,60 @@
     }
 
 
+    
+
 })();
+
+var linkValue;
+
+function imageUpload(){
+
+    let textInput = document.getElementById('input');
+
+    var output = PUBNUB.$('output'), 
+        input = PUBNUB.$('input'), 
+        button = PUBNUB.$('button'),
+        avatar = PUBNUB.$('avatar')
+
+    var channel = 'mchat';
+
+
+    var p = PUBNUB.init({
+        subscribe_key: 'sub-c-1d799376-85b5-11eb-a47e-8aa5932e3236',
+        publish_key:   'pub-c-c3564aa2-a04d-4ab0-bed3-93a42c77e870'
+        });
+
+
+        p.subscribe({
+            channel  : channel,
+            callback : function(m) {
+                if(m.href !== undefined){
+                    output.innerHTML = '<p><i class="' + m.avatar + '"></i><a ' + 'href=\"' + m.href + '\"' +  ' target="_blank">' +  m.text.replace( /[<>]/ig, '' ) + '</a></p>' + output.innerHTML; 
+                }
+            }
+        });
+
+    function publishImage() {
+        if(textInput.value.length > 0){
+            p.publish({
+                channel : channel, 
+                message : {avatar: avatar.className, text: String(linkValue), href: String(linkValue)}, 
+                x : (input.value='')
+                });
+            };
+        }
+
+
+    var callbackLink = function (res) {
+        if (res.success === true) {
+            textInput.value = res.data.link;
+            linkValue = res.data.link;
+            publishImage();
+        }
+    };
+    
+    new Imgur({
+        clientid: '7f0647e1e9365c2',
+        callback: callbackLink
+    });
+};
