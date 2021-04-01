@@ -99,7 +99,7 @@ function imageUpload(){
             channel  : channel,
             callback : function(m) {
                 if(m.href !== undefined){
-                    output.innerHTML = '<p><i class="' + m.avatar + '"></i><a ' + 'href=\"' + m.href + '\"' +  ' target="_blank">' +  m.text.replace( /[<>]/ig, '' ) + '</a></p>' + output.innerHTML; 
+                    output.innerHTML = '<p><i class="' + m.avatar + '"></i><a href="' + m.href + '" target="_blank"><img ' + 'src=\"' + m.href + '\"' +  ' id="images">' + '</img></a></p>' + output.innerHTML; 
                 }
             }
         });

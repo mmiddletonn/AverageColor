@@ -88,10 +88,14 @@ button:hover{
 #avatar:hover{
     cursor: pointer;
 }
-a {
+a:hover {
+    cursor: pointer;
+}
+#images {
+    max-width: 25%;
+    height: auto;
     position: relative;
     margin-left: 45px;
-    color: #333;
 }
 
 /* Font Icons */
