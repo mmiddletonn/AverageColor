@@ -30,7 +30,7 @@ h1 {
 input[type=text], button {
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid #ddd;
+    border: 3.5px solid #ccc;
     border-radius: 10px;
     color: #333;
     font-size: 1em;
@@ -40,11 +40,12 @@ input[type=text], button {
 }
 button {
     background: #e6e6e6;
-    text-shadow: 0 1px 0 #f3f3f3;
     margin: .5em 0 2em 0;
     width: 100%;
     transition: background .15s;
+    border: 3.5px solid #ccc;
     border-radius: 10px;
+    color: #333;
 }
 button:hover{
     cursor: pointer;
@@ -92,7 +93,7 @@ a:hover {
     cursor: pointer;
 }
 #images {
-    max-width: 15%;
+    max-width: 25%;
     height: auto;
     position: relative;
     margin-left: 45px;

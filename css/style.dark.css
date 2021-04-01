@@ -48,7 +48,7 @@ button {
     width: 100%;
     transition: background .15s;
     border: 3.5px solid #000000;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #dbdbdb;
 }
 button:hover{
@@ -101,7 +101,7 @@ a:hover{
 }
 
 #images {
-    max-width: 15%;
+    max-width: 25%;
     height: auto;
     position: relative;
     margin-left: 45px;

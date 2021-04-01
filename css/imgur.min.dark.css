@@ -6,6 +6,7 @@
 	position: relative;
 	width: auto;
 	background: #333333;
+	transition: background .25s;
 }
 
 .dropzone p {
@@ -17,7 +18,7 @@
 }
 
 input[type=file]:hover {
-	cursor: pointer;
+	cursor: copy;
 }
 
 .dropzone input[type=file] {
@@ -27,7 +28,7 @@ input[type=file]:hover {
 	opacity: 0;
 	position: absolute;
 	top: 0;
-	width: 100%
+	width: 100%;
 }
 
 .dropzone+.status {
@@ -39,6 +40,7 @@ input[type=file]:hover {
 
 .dropzone.dropzone-dragging {
 	border-color: #000;
+	background: #252525;
 }
 .loading-modal {
 	background-color: rgba(128, 128, 128, 0.8);
