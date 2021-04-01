@@ -96,6 +96,7 @@ a:hover {
     height: auto;
     position: relative;
     margin-left: 45px;
+    border-radius: 10px;
 }
 
 /* Font Icons */
