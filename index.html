@@ -38,7 +38,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<script>
-		
+		if(localStorage.getItem("theme") == null){
+	 		currentStyleSheet1.href = window.location.href + "css/style.dark.css";
+	 		currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
+			localStorage.setItem("theme", "dark");	
+		}    
 		function changeStyleSheet(){
 			if(currentStyleSheet1.href == window.location.href + "css/style.css"){
 				currentStyleSheet1.href = window.location.href + "css/style.dark.css";
