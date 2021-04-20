@@ -16,14 +16,18 @@
     
     // Assign a random avatar in random color
     
-
+    let avatarChoices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    let colorChoices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	
 
     let trollFaceNum = Math.floor(Math.random() * 100);
     console.log(trollFaceNum);
     if(trollFaceNum == 69){
         avatar.className = "trollFace";
     }else{
-        avatar.className = 'face-' + ((Math.random() * 13 + 1) >>> 0) + ' color-' + ((Math.random() * 10 + 1) >>> 0);
+	avatarChoice = avatarChoices[((Math.random() * 13 + 1) >>> 0)];
+	avatarColor = colorChoices[((Math.random() * 10 + 1) >>> 0)];
+        avatar.className = 'face-' + String(avatarChoice) + ' color-' + String(avatarColor);
     }
 
     var p = PUBNUB.init({
