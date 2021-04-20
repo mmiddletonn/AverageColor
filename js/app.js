@@ -73,7 +73,12 @@ function imageUpload(){
     
     let textInput = document.getElementById('input');
 
-    
+    if(localStorage.getItem("theme") != "light" && localStorage.getItem("theme") != "dark"){
+	 currentStyleSheet1.href = window.location.href + "css/style.dark.css";
+	 currentStyleSheet2.href = window.location.href + "css/imgur.min.dark.css";
+	 localStorage.setItem("theme", "dark");	
+    }    
+
     if(localStorage.getItem("theme") == "light"){
 		currentStyleSheet1.href = window.location.href + "css/style.css";
 		currentStyleSheet2.href = window.location.href + "css/imgur.min.css";
