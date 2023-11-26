@@ -1,11 +1,11 @@
 # AverageColor
 
 ## Demo
-Add a demo image or gif here showing the AverageColor in action.
+![AverageColor](AverageColorDemo.gif)
 
 ## Website
 
-Link to your project website (if applicable).
+https://mmiddletonn.github.io/AverageColor
 
 ## How It Works
 
@@ -13,9 +13,9 @@ This website is a JavaScript application that processes images to determine thei
 
 ## Usage
 
-1. Drag and drop an image or click on the target area to upload an image file.
-2. The application displays the average color of the uploaded image in RGB, HEX, and HSL formats.
-3. Multiple images can be analyzed simultaneously.
+- Drag and drop an image or click on the target area to upload an image file.
+- The application displays the average color of the uploaded image in RGB, HEX, and HSL formats.
+- Multiple images can be analyzed simultaneously.
 
 ## Features
 
@@ -30,8 +30,4 @@ This project is open-sourced and available under the [MIT License](LICENSE).
 
 ## Contact
 
-For any queries or suggestions, feel free to contact [Your Contact Information].
-
-## Credits
-
-Credit any inspirations or third-party resources used in the development of this project.
+For any queries or suggestions, feel free to contact me@matt-middleton.com
